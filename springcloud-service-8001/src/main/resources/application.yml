@@ -1,0 +1,34 @@
+server:
+  port: 8001
+
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: springcloud-service-1 # alias for current service
+    prefer-ip-address: true # change to physical ip-addr of current service
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/ # Register a service into a cluster
+    fetch-registry: true
+    register-with-eureka: true
+
+spring:
+  application:
+    name: springcloud-service-8001
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/${spring.application.name}
+    username: root
+    password: 123456
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+
+info:
+  app.name: springcloud-service
+  company.name: seanforfun.github.io
+  build.artifactId: @project.artifactId@
+  build.version: @project.version@
+  port: ${server.port}

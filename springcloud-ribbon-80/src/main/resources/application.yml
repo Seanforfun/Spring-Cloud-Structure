@@ -1,0 +1,24 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: springcloud-ribbon-80
+
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: springcloud-ribbon # alias for current service
+    prefer-ip-address: true # change to physical ip-addr of current service
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/ # Register a service into a cluster
+    fetch-registry: true
+    register-with-eureka: true
+
+info:
+  app.name: springcloud-service
+  company.name: seanforfun.github.io
+  build.artifactId: @project.artifactId@
+  build.version: @project.version@
+  port: ${server.port}

@@ -149,6 +149,7 @@
         <module>springcloud-eureka-server-7002</module>
         <module>springcloud-eureka-server-7003</module>
         <module>springcloud-service-8001</module>
+        <module>springcloud-ribbon-80</module>
     </modules>
 
 

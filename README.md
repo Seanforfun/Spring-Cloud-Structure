@@ -14,5 +14,8 @@ Module for including general apis and classes for rest of the modules.
 Eureka server clusters, where micro-services are registered to the servers. Realized service register and discovery.
 
 ### [springcloud-service-800*](https://github.com/Seanforfun/Spring-Cloud-Structure/tree/master/springcloud-service-8001) 
-A simple micro-service
+A simple micro-service.
+
+### [springcloud-ribbon-80](https://github.com/Seanforfun/Spring-Cloud-Structure/tree/master/springcloud-ribbon-80)
+Client side load balancer. We can customize our load balance strategy in this module.
 

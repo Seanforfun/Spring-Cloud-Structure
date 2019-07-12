@@ -22,3 +22,4 @@ info:
   build.artifactId: @project.artifactId@
   build.version: @project.version@
   port: ${server.port}
+  loadbalance: Round Robin

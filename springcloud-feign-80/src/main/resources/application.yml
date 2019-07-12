@@ -16,6 +16,10 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
 
+feign:
+  hystrix:
+    enabled: true
+
 info:
   app.name: springcloud-feign
   company.name: seanforfun.github.io

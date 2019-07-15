@@ -1,0 +1,32 @@
+server:
+  port: 9527
+
+eureka:
+  instance:
+    hostname: zuul.com
+    # instance-id: springcloud-service-1 # alias for singleton service, must close it for repeating registration
+    prefer-ip-address: true # change to physical ip-addr of current service
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/, http://eureka7002.com:7002/eureka/, http://eureka7003.com:7003/eureka/ # Register a service into a cluster
+    fetch-registry: true
+    register-with-eureka: true
+
+zuul:
+  routes:
+    dept.serviceId: springcloud-feign-80
+    dept.path: /mydept/**
+  ignored-services: '*' #springcloud-feign-80, springcloud-service-8001-hystrix
+  prefix: /seanforfun
+
+
+info:
+  app.name: springcloud-zuul
+  company.name: seanforfun.github.io
+  build.artifactId: @project.artifactId@
+  build.version: @project.version@
+  port: ${server.port}
+
+spring:
+  application:
+    name: springcloud-zuul

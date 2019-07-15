@@ -19,3 +19,14 @@ A simple micro-service.
 ### [springcloud-ribbon-80](https://github.com/Seanforfun/Spring-Cloud-Structure/tree/master/springcloud-ribbon-80)
 Client side load balancer. We can customize our load balance strategy in this module.
 
+### [springcloud-feign-80](https://github.com/Seanforfun/Spring-Cloud-Structure/tree/master/springcloud-feign-80)
+Feign integrated ribbon inside and realized the round robin load balance declaration using interface and annotation.
+
+### [springcloud-service-8001-hystrix](https://github.com/Seanforfun/Spring-Cloud-Structure/tree/master/springcloud-service-8001-hystrix) 
+Circuit breaker and service degrade.
+
+### [springcloud-hystrix-board-9001](https://github.com/Seanforfun/Spring-Cloud-Structure/tree/master/springcloud-hystrix-board-9001)
+Hystrix dashboard to monitor status and volume of micro-service.
+
+### [springcloud-zull-9527](https://github.com/Seanforfun/Spring-Cloud-Structure/tree/master/springcloud-zuul-9527)
+Router module.

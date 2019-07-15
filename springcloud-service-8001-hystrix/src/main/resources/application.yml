@@ -22,3 +22,9 @@ info:
   build.artifactId: @project.artifactId@
   build.version: @project.version@
   port: ${server.port}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ['hystrix.stream','info','health']

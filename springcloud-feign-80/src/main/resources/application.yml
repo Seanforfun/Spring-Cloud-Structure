@@ -27,3 +27,9 @@ info:
   build.version: @project.version@
   port: ${server.port}
   loadbalance: Round Robin
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ['hystrix.stream','info','health']

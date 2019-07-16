@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    config:
+      name: springcloud-app-hystrix-config-8001
+      profile: dev
+      label: master
+      uri: http://config-3344.com:3344 # Connect to config server.
+

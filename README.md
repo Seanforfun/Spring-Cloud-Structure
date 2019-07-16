@@ -30,3 +30,9 @@ Hystrix dashboard to monitor status and volume of micro-service.
 
 ### [springcloud-zull-9527](https://github.com/Seanforfun/Spring-Cloud-Structure/tree/master/springcloud-zuul-9527)
 Router module.
+
+### [springcloud-config-3344](https://github.com/Seanforfun/Spring-Cloud-Structure/tree/master/springcloud-config-3344)
+Remote config server.
+
+### [springcloud-config-client-3355](https://github.com/Seanforfun/Spring-Cloud-Structure/tree/master/springcloud-config-client-3355)
+Remote config client.

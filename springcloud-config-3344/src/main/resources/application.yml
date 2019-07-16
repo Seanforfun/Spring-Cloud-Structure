@@ -1,0 +1,22 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: springcloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Seanforfun/SpringCloudConfig
+
+eureka:
+  instance:
+    hostname: config-3344.com
+    # instance-id: springcloud-service-1 # alias for singleton service, must close it for repeating registration
+    prefer-ip-address: true # change to physical ip-addr of current service
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/, http://eureka7002.com:7002/eureka/, http://eureka7003.com:7003/eureka/ # Register a service into a cluster
+    fetch-registry: true
+    register-with-eureka: true
